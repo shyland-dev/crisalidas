@@ -1,0 +1,95 @@
+<div id="menuDiv">
+  <div id="closeMenuTriggerDiv" (click)="toggleMenu()"></div>
+
+  <div id="menu-wrapper">
+    <h1>Menu</h1>
+
+    <hr>
+
+    <nav *ngIf="allPages != []">
+      <a *ngFor="let page of allPages | keyvalue : defaultOrder" [attr.isActive]="currentPage == page.value['path']" (click)="redirectTo(page.value['path'], title)">{{page.value['path']}}</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+  <header [attr.hasScrollbar]="hasScrollbar">
+    <section (click)="redirectTo('', title)">
+      <img src="assets/imgs/PNGs/crisalidas-icon.png" alt="icon" />
+
+      <h1>Crisalidas Criações</h1>
+    </section>
+
+    <nav *ngIf="allPages != []" (click)="toggleMenu()">
+      <a *ngFor="let page of allPages | keyvalue : defaultOrder" [attr.isActive]="currentPage == page.value['path']" (click)="redirectTo(page.value['path'], title)">{{page.value['path']}}</a>
+    </nav>
+  </header>
+
+  <router-outlet></router-outlet>
+
+  <footer>
+    <div class="footer-wrapper" id="logo_email">
+      <div id="logoDiv">
+        <img src="assets/imgs/PNGs/crisalidas-logo.png" alt="logo" />
+      </div>
+
+      <div id="emailDiv">
+        <p>Subscribe to our newsletter</p>
+
+        <div id="subscribeEmailDiv">
+          <input type="email">
+
+          <div id="pseudoButton">Subscribe</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper" id="page_social">
+      <div id="pageDiv">
+        <ul *ngIf="allPages != []">
+          <li *ngFor="let page of allPages | keyvalue : defaultOrder" [attr.isActive]="currentPage == page.value['path']" (click)="redirectTo(page.value['path'], title)">
+            <a>
+              {{page.value['path']}}
+            </a>
+          </li>
+        </ul>
+
+        <ul *ngIf="allPages != []">
+          <li *ngFor="let page of allPages | keyvalue : defaultOrder" [attr.isActive]="currentPage == page.value['path']" (click)="redirectTo(page.value['path'], title)">
+            <a>
+              {{page.value['path']}}
+            </a>
+          </li>
+        </ul>
+
+        <ul *ngIf="allPages != []">
+          <li *ngFor="let page of allPages | keyvalue : defaultOrder" [attr.isActive]="currentPage == page.value['path']" (click)="redirectTo(page.value['path'], title)">
+            <a>
+              {{page.value['path']}}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="socialDiv">
+        <a href="#" target="_blank">
+          <img src="assets/imgs/SVGs/logo-whatsapp.svg" alt="github" />
+        </a>
+
+        <a href="#" target="_blank">
+          <img src="assets/imgs/SVGs/logo-instagram.svg" alt="instagram" />
+        </a>
+
+        <a href="#" target="_blank">
+          <img src="assets/imgs/SVGs/logo-facebook.svg" alt="linkedin" />
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-wrapper" id="license">
+      <div id="licenseDiv">
+        <p>&#169; 2023 ShylandDev; All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</main>
