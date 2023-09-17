@@ -9,14 +9,13 @@ import { SobreComponent } from './pages/sobre/sobre.component';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'test', component: TestComponent },
   { path: 'not-found', component: NotFoundComponent },
 
   { path: 'sobre', component: SobreComponent },
   { path: 'catalogo', component: CatalogoComponent },
 
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/not-found', pathMatch: 'full' },
 ];
 

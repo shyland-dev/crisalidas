@@ -77,7 +77,7 @@ export class AppComponent {
     // { skipLocationChange: true }
     await this.router.navigateByUrl(`/${url}`);
 
-    if (url == '' || url == 'home') window.history.pushState({}, '', '/');
+    // if (url == '' || url == 'home') window.history.pushState({}, '', '/');
 
     this.currentPage = url;
     this.db.set('last_page', url);
