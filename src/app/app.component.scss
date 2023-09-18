@@ -50,7 +50,7 @@ header {
     border-radius: 25px;
     transition: 0.3s all;
     &:hover {
-      background: transparentize($color: $crisalidas-light, $amount: 0.95);
+      background: transparentize($color: $crisalidas-light, $amount: 0.8);
       cursor: pointer;
 
       h1 {
@@ -68,6 +68,7 @@ header {
     h1 {
       padding-right: 5%;
       font-size: calc(var(--responsiveUnit) * 1.5);
+      white-space: nowrap;
     }
   }
 
@@ -88,11 +89,14 @@ header {
       white-space: nowrap;
       transition: 0.3s all;
       &:hover {
-        background: transparentize($color: $crisalidas-secondary, $amount: 0.8);
+        background: transparentize($color: $crisalidas-secondary, $amount: 0.7);
         cursor: pointer;
       }
       &[isActive="true"] {
         color: $crisalidas-secondary;
+        &:hover {
+          background: transparentize($color: $crisalidas-dark, $amount: 0.2);
+        }
       }
     }
   }
@@ -135,7 +139,8 @@ footer {
       width: 60%;
 
       p {
-        font-size: calc(var(--responsiveUnit) * 1);
+        font-size: calc(var(--responsiveUnit) * 1.5);
+        font-weight: bolder;
         margin: 0;
         margin-block: 1%;
         height: 30%;
@@ -204,6 +209,7 @@ footer {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+      width: 40%;
 
       a {
         font-size: calc(var(--responsiveUnit) * 0.85);
@@ -213,9 +219,17 @@ footer {
         border-radius: 5px;
         white-space: nowrap;
         transition: 0.3s all;
+        padding-inline: 5%;
+        width: fit-content;
         &:hover {
-          background: transparentize($color: $crisalidas-secondary, $amount: 0.8);
+          background: transparentize($color: $crisalidas-secondary, $amount: 0.7);
           cursor: pointer;
+        }
+        &[isActive="true"] {
+          color: $crisalidas-secondary;
+          &:hover {
+            background: transparentize($color: $crisalidas-dark, $amount: 0.2);
+          }
         }
       }
     }
@@ -225,7 +239,7 @@ footer {
       align-items: center;
       justify-content: space-around;
       flex-wrap: wrap;
-      width: 50%;
+      width: 60%;
 
       a {
         margin: 1%;
@@ -237,7 +251,7 @@ footer {
         white-space: nowrap;
         transition: 0.3s all;
         &:hover {
-          background: transparentize($color: $crisalidas-secondary, $amount: 0.8);
+          background: transparentize($color: $crisalidas-secondary, $amount: 0.7);
           border: 1px solid $crisalidas-light;
           cursor: pointer;
         }
@@ -263,6 +277,17 @@ footer {
       p {
         font-size: calc(var(--responsiveUnit) * 0.7);
         font-family: monospace;
+
+        a {
+          text-decoration: underline;
+          font-family: monospace;
+          color: $crisalidas-primary;
+          font-weight: bolder;
+          &:hover {
+            color: $crisalidas-secondary;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
@@ -388,7 +413,7 @@ footer {
         width: 100%;
 
         p {
-          font-size: calc(var(--responsiveUnit) * 1.7);
+          font-size: calc(var(--responsiveUnit) * 1.9);
         }
 
         #subscribeEmailDiv {
@@ -398,12 +423,11 @@ footer {
           width: 100%;
 
           input {
-            // height: 100%;
             font-size: calc(var(--responsiveUnit) * 1.5);
           }
 
           #pseudoButton {
-            font-size: calc(var(--responsiveUnit) * 1.5);
+            font-size: calc(var(--responsiveUnit) * 1.4);
             padding-inline: 4%;
           }
         }
@@ -436,6 +460,7 @@ footer {
       }
 
       #socialDiv {
+        justify-content: space-evenly;
         width: 100%;
 
         a {
