@@ -47,24 +47,8 @@
     <div class="footer-wrapper" id="page_social">
       <div id="pageDiv">
         <ul *ngIf="allPages != []">
-          <li *ngFor="let page of allPages | keyvalue : defaultOrder" [attr.isActive]="currentPage == page.value['path']" (click)="redirectTo(page.value['path'], title)">
-            <a>
-              {{page.value['path']}}
-            </a>
-          </li>
-        </ul>
-
-        <ul *ngIf="allPages != []">
-          <li *ngFor="let page of allPages | keyvalue : defaultOrder" [attr.isActive]="currentPage == page.value['path']" (click)="redirectTo(page.value['path'], title)">
-            <a>
-              {{page.value['path']}}
-            </a>
-          </li>
-        </ul>
-
-        <ul *ngIf="allPages != []">
-          <li *ngFor="let page of allPages | keyvalue : defaultOrder" [attr.isActive]="currentPage == page.value['path']" (click)="redirectTo(page.value['path'], title)">
-            <a>
+          <li *ngFor="let page of allPages | keyvalue : defaultOrder" (click)="redirectTo(page.value['path'], title)">
+            <a [attr.isActive]="currentPage == page.value['path']">
               {{page.value['path']}}
             </a>
           </li>
@@ -88,7 +72,9 @@
 
     <div class="footer-wrapper" id="license">
       <div id="licenseDiv">
-        <p>&#169; 2023 ShylandDev; All rights reserved.</p>
+        <p>
+          &#169; 2023 <a href="https://github.com/shyland-dev" target="_blank">ShylandDev;</a> All rights reserved.
+        </p>
       </div>
     </div>
   </footer>
