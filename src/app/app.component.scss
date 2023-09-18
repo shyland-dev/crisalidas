@@ -36,7 +36,7 @@ header {
   justify-content: space-around;
   background: transparentize($color: $void, $amount: 0.8);
   backdrop-filter: blur(5px);
-  border-bottom: 1px solid $crisalidas-tertiary;
+  border-bottom: 1px solid $crisalidas-secondary;
   z-index: 2;
   &[hasScrollbar="true"] {
     width: calc(100% - var(--scrollbarWidth));
@@ -50,19 +50,19 @@ header {
     border-radius: 25px;
     transition: 0.3s all;
     &:hover {
-      background: transparentize($color: $crisalidas-secondary, $amount: 0.95);
+      background: transparentize($color: $crisalidas-light, $amount: 0.95);
       cursor: pointer;
 
       h1 {
-        text-shadow: 8px 5px 20px $crisalidas-tertiary;
+        text-shadow: 8px 5px 20px $crisalidas-secondary;
       }
     }
 
     img {
       border-radius: 50%;
-      min-height: calc(var(--responsiveUnit) * 3);
-      max-height: calc(var(--responsiveUnit) * 3);
-      height: calc(var(--responsiveUnit) * 3);
+      min-height: calc(var(--responsiveUnit) * 5);
+      max-height: calc(var(--responsiveUnit) * 5);
+      height: calc(var(--responsiveUnit) * 5);
     }
 
     h1 {
@@ -77,6 +77,7 @@ header {
     justify-content: center;
 
     a {
+      font-family: "CooperFive";
       font-size: calc(var(--responsiveUnit) * 0.92);
       margin: 1%;
       padding: 3%;
@@ -87,11 +88,11 @@ header {
       white-space: nowrap;
       transition: 0.3s all;
       &:hover {
-        background: transparentize($color: $crisalidas-tertiary, $amount: 0.8);
+        background: transparentize($color: $crisalidas-secondary, $amount: 0.8);
         cursor: pointer;
       }
       &[isActive="true"] {
-        color: $crisalidas-tertiary;
+        color: $crisalidas-secondary;
       }
     }
   }
@@ -99,7 +100,7 @@ header {
 
 footer {
   width: 100%;
-  border-top: 1px solid $crisalidas-tertiary;
+  border-top: 1px solid $crisalidas-secondary;
   background: transparentize($color: $void, $amount: 0.8);
   backdrop-filter: blur(5px);
   color: $crisalidas-primary;
@@ -114,12 +115,12 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 33.3%;
+      width: 40%;
 
       img {
-        min-width: calc(var(--responsiveUnit) * 10);
-        max-width: calc(var(--responsiveUnit) * 10);
-        width: calc(var(--responsiveUnit) * 10);
+        min-width: calc(var(--responsiveUnit) * 15);
+        max-width: calc(var(--responsiveUnit) * 15);
+        width: calc(var(--responsiveUnit) * 15);
         height: auto;
         margin: 0;
         padding: 0;
@@ -131,7 +132,7 @@ footer {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 66.6%;
+      width: 60%;
 
       p {
         font-size: calc(var(--responsiveUnit) * 1);
@@ -149,7 +150,7 @@ footer {
 
         input {
           background: $crisalidas-primary;
-          color: $crisalidas-secondary;
+          color: $crisalidas-light;
           box-sizing: border-box;
           min-width: 60%;
           max-width: 60%;
@@ -162,7 +163,7 @@ footer {
           transition: 0.3s all;
           font-size: calc(var(--responsiveUnit) * 1.1);
           &:focus {
-            border: 1px solid $crisalidas-secondary;
+            border: 1px solid $crisalidas-light;
           }
         }
 
@@ -175,18 +176,19 @@ footer {
           width: 20%;
           border-top-right-radius: 10px;
           border-bottom-right-radius: 10px;
-          border: 1px solid $crisalidas-tertiary;
-          border-left: 2px solid $crisalidas-tertiary;
+          border: 1px solid $crisalidas-secondary;
+          border-left: 2px solid $crisalidas-secondary;
           padding: 1%;
           transition: 0.3s all;
           font-size: calc(var(--responsiveUnit) * 1.1);
+          font-family: "CooperFive";
           background: transparentize($color: $crisalidas-primary, $amount: 0.2);
           backdrop-filter: blur(5px);
-          color: $crisalidas-secondary;
+          color: $crisalidas-light;
           &:hover {
             background: transparentize($color: $crisalidas-primary, $amount: 0.1);
             border: 1px solid $crisalidas-primary;
-            border-left: 2px solid $crisalidas-tertiary;
+            border-left: 2px solid $crisalidas-secondary;
             cursor: pointer;
           }
         }
@@ -205,13 +207,14 @@ footer {
 
       a {
         font-size: calc(var(--responsiveUnit) * 0.85);
+        font-family: "CooperFive";
         display: flex;
         color: $crisalidas-primary;
         border-radius: 5px;
         white-space: nowrap;
         transition: 0.3s all;
         &:hover {
-          background: transparentize($color: $crisalidas-tertiary, $amount: 0.8);
+          background: transparentize($color: $crisalidas-secondary, $amount: 0.8);
           cursor: pointer;
         }
       }
@@ -234,8 +237,8 @@ footer {
         white-space: nowrap;
         transition: 0.3s all;
         &:hover {
-          background: transparentize($color: $crisalidas-tertiary, $amount: 0.8);
-          border: 1px solid $crisalidas-secondary;
+          background: transparentize($color: $crisalidas-secondary, $amount: 0.8);
+          border: 1px solid $crisalidas-light;
           cursor: pointer;
         }
 
@@ -259,6 +262,7 @@ footer {
 
       p {
         font-size: calc(var(--responsiveUnit) * 0.7);
+        font-family: monospace;
       }
     }
   }
@@ -287,12 +291,12 @@ footer {
       #menu-wrapper {
         width: 60vw;
         height: 100vh;
-        border-left: 1px solid $crisalidas-tertiary;
+        border-left: 1px solid $crisalidas-secondary;
         background: transparentize($color: $void, $amount: 0.6);
         backdrop-filter: blur(10px);
 
         h1 {
-          background: transparentize($color: $crisalidas-secondary, $amount: 0.8);
+          background: transparentize($color: $crisalidas-light, $amount: 0.8);
           font-size: calc(var(--responsiveUnit) * 2.5);
           margin: 0;
           padding: 3%;
@@ -301,7 +305,7 @@ footer {
 
         hr {
           margin: 0;
-          border-bottom: 1px solid $crisalidas-tertiary;
+          border-bottom: 1px solid $crisalidas-secondary;
         }
 
         nav {
@@ -311,6 +315,7 @@ footer {
 
           a {
             font-size: calc(var(--responsiveUnit) * 2.2);
+            font-family: "CooperFive";
             padding: 3%;
             width: 100%;
             display: flex;
@@ -318,11 +323,11 @@ footer {
             white-space: nowrap;
             transition: 0.3s all;
             &:hover {
-              background: transparentize($color: $crisalidas-tertiary, $amount: 0.8);
+              background: transparentize($color: $crisalidas-secondary, $amount: 0.8);
               cursor: pointer;
             }
             &[isActive="true"] {
-              color: $crisalidas-tertiary;
+              color: $crisalidas-secondary;
             }
           }
         }
