@@ -10,9 +10,10 @@ $medium: #92949c;
 $light: #f4f5f8;
 
 $crisalidas-primary: #3a0941;
-$crisalidas-secondary: #fefefe;
-$crisalidas-tertiary: #eb9a3e;
-$crisalidas-quaternary: #f13ac0;
+$crisalidas-secondary: #eb9a3e;
+$crisalidas-light: #fefefe;
+$crisalidas-medium: #96989a;
+$crisalidas-dark: #201e1e;
 
 :root {
   --responsiveUnit: calc(1vmin + 1vmax);
@@ -33,7 +34,7 @@ app-root {
 }
 
 * {
-  font-family: monospace;
+  font-family: "Ersa";
   transition: 50ms all;
 }
 
@@ -43,15 +44,15 @@ app-root {
 }
 
 ::-webkit-scrollbar-track {
-  background: $crisalidas-tertiary;
+  background: $crisalidas-medium;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $crisalidas-primary;
+  background: $crisalidas-secondary;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: $crisalidas-quaternary;
+  background: $crisalidas-primary;
 }
 //* SCROLLBAR [END]
 
@@ -94,5 +95,20 @@ app-root {
 @font-face {
   font-family: "CaviarDreams";
   src: url("assets/fonts/caviar_dreams/CaviarDreams.ttf");
+}
+
+@font-face {
+  font-family: "CooperFive";
+  src: url("assets/fonts/cooper-black-five/CooperFiveOpti-Black.otf");
+}
+
+@font-face {
+  font-family: "Ersa";
+  src: url("assets/fonts/Ersa-Font/eras-light-5871822a2e706.otf");
+}
+
+@font-face {
+  font-family: "segoe";
+  src: url("assets/fonts/segoe-font/segoesc.ttf");
 }
 //* FONTS [END]
